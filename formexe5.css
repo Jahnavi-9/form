@@ -1,0 +1,24 @@
+html{
+    background-color:rgb(51, 180, 206)
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+.refredstar{
+    color: red;
+}
+.redstar{
+    color: red;
+}
+.fname{
+display:inline;
+padding-left: 2%;
+padding-top: 0%;
+
+}
+@media (min-width:1231px) and (max-width){
+    
+
+}

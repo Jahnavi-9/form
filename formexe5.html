@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href ="formexe5.css">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1>Travel Reservation Form</h1>
+ <h3><span class = "refredstar">*</span>Denotes Mandatory</h3>
+
+<form action="sample.html" method="get" target="_blank">
+    <label>Fullname<span class = "redstar">*</span></label>
+<input type="text" id="fname" name="fname" placeholder="Enter ur full name" required><br><br>
+    <label>Email:<span class = "redstar">*</span></label>
+    <input type="email" id="email" name="email" placeholder="Enter ur email address" required>
+    <br><br>
+    <label>Select Tour Package:<span class = "redstar">*</span></label>
+    <select id = "Package" name="Package">
+        <option value="">Select the place</option>  
+        <option value="goa">Goa</option>
+        <option value = "darjling">Darjling</option>
+        <option value = "Chennai beach">Chennai Beach</option>
+        </select><br><br>
+<label>Arrival Date<span class = redstar>*</label><br>
+    <input type="date" id ="date" name = "date"><br><br>
+    <label>Number of persons<span class = "redstar">*</span></label>
+    <input type ="number" id="no" name="no" placeholder="Count" min="1" max="20" required><br><br>
+<label>What would youu want to avail? <span class="redstar">*</span></label><br>
+Boarding<input type="checkbox" id ="Boarding" name ="Boarding"><br>
+Fooding<input type="checkbox" id ="Fooding" name ="Fooding"><br>
+Sight seeing<input type="checkbox" id ="seeing" name ="seeing">
+<br><br>
+Discount Coupon code: <input type="text" id = "discount" name="discount">
+<br><br>
+Terms and conditions<span class="redstar">*</span><br>
+<input type ="radio" id="agree" value="Agree">I agree ✅
+<input type ="radio" id ="disagree" value = "Disagree">I disagree ❌<br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>

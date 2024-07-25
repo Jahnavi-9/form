@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .result {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .result p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Submission Result</h1>
+    <div class="result" id="result"></div>
+
+    <script>
+        // Function to parse URL query parameters
+        function getQueryParams() {
+            const params = {};
+            window.location.search.substring(1).split("&").forEach(pair => {
+                const [key, value] = pair.split("=");
+                params[decodeURIComponent(key)] = decodeURIComponent(value || "");
+            });
+            return params;
+        }
+
+        // Function to display the form data
+        function displayFormData() {
+            const params = getQueryParams();
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = "<h2>Submitted Data:</h2>";
+
+            for (const key in params) {
+                if (params.hasOwnProperty(key)) {
+                    const value = params[key];
+                    const p = document.createElement('p');
+                    p.textContent = `${key}: ${value}`;
+                    resultDiv.appendChild(p);
+                }
+            }
+        }
+
+        // Call the function to display form data
+        displayFormData();
+    </script>
+</body>
+</html>
